@@ -9,7 +9,7 @@ update_github:
     script:
       #- !reference [.set-remote-github, script]
       #- !reference [ .get_from_tar_and_replace_www, script ]
-      - git remote add github https://aenima-x:TEST@github.com/aenima-x/faraday.git
+      - git remote add github https://aenima-x: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@github.com/aenima-x/faraday.git
       - git config user.email "devops@faradaysec.com"
       - git config user.name "Devops"
       - touch test.txt
