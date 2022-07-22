@@ -13,7 +13,7 @@ update_github:
       - git config --global user.email "devops@faradaysec.com"
       - git config --global user.name "Devops"
       - git commit -m "Front Updated"
-      - git push --force github $CI_COMMIT_REF_NAME:master
+      - git push --force github white/master:master
     rules:
       - if: $FORK_TEST
       - if: '$CI_COMMIT_REF_NAME == "white/master"'
