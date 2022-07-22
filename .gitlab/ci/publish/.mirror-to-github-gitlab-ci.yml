@@ -7,11 +7,13 @@ update_github:
     image: python:3
     stage: publish
     script:
-      - !reference [.set-remote-github, script]
-      - !reference [ .get_from_tar_and_replace_www, script ]
-      - git add .
+      #- !reference [.set-remote-github, script]
+      #- !reference [ .get_from_tar_and_replace_www, script ]
+      - git remote add github https://aenima-x:${GH_TOKEN2}@github.com/aenima-x/faraday.git
       - git config user.email "devops@faradaysec.com"
       - git config user.name "Devops"
+      - touch test.txt
+      - git add .
       - git commit -m "Front Updated"
       #- git show-ref
       - git push -v --force github $CI_COMMIT_REF_NAME:master
