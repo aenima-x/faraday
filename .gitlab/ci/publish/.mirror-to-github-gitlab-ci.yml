@@ -14,7 +14,7 @@ update_github:
       - git config user.name "Devops"
       - git commit -m "Front Updated"
       #- git show-ref
-      - git push -u --force github $CI_COMMIT_REF_NAME:master
+      - git push -v --force github $CI_COMMIT_REF_NAME:master
     rules:
       - if: $FORK_TEST
       - if: '$CI_COMMIT_REF_NAME == "white/master"'
