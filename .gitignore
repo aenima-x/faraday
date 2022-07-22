@@ -75,7 +75,7 @@ stream.svg
 scripts/searcher/output/searcher.db
 .pytest_cache
 reports/executive/outputs/scope.docx
-
+.cache/
 # Editable install hoook
 _install
 faraday_plugins/
