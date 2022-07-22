@@ -1,7 +1,7 @@
 .set-remote-github:
   script:
     - git remote add github https://aenima-x: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@github.com/aenima-x/faraday.git
-
+  allow_failure: true
 
 update_github:
     image: python:3
