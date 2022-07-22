@@ -15,7 +15,7 @@ update_github:
       - touch test.txt
       - git add .
       - git commit -m "Front Updated"
-      - git --version
+      - git remote -v
       - git show-ref
       - git push -v --force github $CI_COMMIT_REF_NAME:master
     rules:
