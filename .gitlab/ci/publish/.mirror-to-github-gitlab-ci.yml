@@ -1,6 +1,6 @@
 .set-remote-github:
   script:
-    - git remote add $CI_COMMIT_REF_NAME https://aenima-x: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@github.com/aenima-x/faraday.git
+    - git remote add $CI_COMMIT_REF_NAME https://aenima-x:${GH_TOKEN2}@github.com/aenima-x/faraday.git
   allow_failure: true
 
 update_github:
