@@ -10,6 +10,8 @@ update_github:
       - !reference [.set-remote-github, script]
       - !reference [ .get_from_tar_and_replace_www, script ]
       - git add *
+      - git config --global user.email "devops@faradaysec.com"
+      - git config --global user.name "Devops"
       - git commit -m "Front Updated"
       - git push --force github $CI_COMMIT_REF_NAME:$DESTINY_BRANCH
     rules:
