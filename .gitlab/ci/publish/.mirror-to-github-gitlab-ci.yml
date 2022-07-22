@@ -1,6 +1,6 @@
 .set-remote-github:
   script:
-    - git remote add github https://aenima-x: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@github.com/aenima-x/faraday.git
+    - git remote add $CI_COMMIT_REF_NAME https://aenima-x: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@github.com/aenima-x/faraday.git
   allow_failure: true
 
 update_github:
@@ -14,7 +14,7 @@ update_github:
       - git config --global user.name "Devops"
       - git commit -m "Front Updated"
       #- git show-ref
-      - git push --force github $CI_COMMIT_REF_NAME:master
+      - git push --force $CI_COMMIT_REF_NAME $CI_COMMIT_REF_NAME:master
     rules:
       - if: $FORK_TEST
       - if: '$CI_COMMIT_REF_NAME == "white/master"'
