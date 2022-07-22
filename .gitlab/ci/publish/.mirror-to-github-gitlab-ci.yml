@@ -9,7 +9,7 @@ update_github:
     script:
       - !reference [.set-remote-github, script]
       - !reference [ .get_from_tar_and_replace_www, script ]
-      - git add *
+      - git add --all
       - git config --global user.email "devops@faradaysec.com"
       - git config --global user.name "Devops"
       - git commit -m "Front Updated"
