@@ -16,7 +16,7 @@ update_github:
       - git commit -m "Front Updated"
       - git branch
       #- git show-ref
-      - git push -v --force github master
+      - git push -v --force github HEAD:master
     rules:
       - if: $FORK_TEST
       - if: '$CI_COMMIT_REF_NAME == "white/master"'
