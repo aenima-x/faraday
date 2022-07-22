@@ -27,7 +27,7 @@ update_github:
     needs:
       - project: faradaysec/faraday-react
         job: npm_build
-        ref: community/master
+        ref: community/dev
         artifacts: true
 
 
