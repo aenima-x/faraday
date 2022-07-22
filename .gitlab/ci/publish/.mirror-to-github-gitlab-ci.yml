@@ -25,7 +25,7 @@ update_github:
 #          DESTINY_BRANCH: staging
 #        when: on_success
     tags:
-        - faradaytests
+        - digitalocean-dev
     needs:
       - project: faradaysec/faraday-react
         job: npm_build
