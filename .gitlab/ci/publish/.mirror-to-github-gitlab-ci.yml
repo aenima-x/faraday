@@ -9,11 +9,11 @@ update_github:
     script:
       - !reference [.set-remote-github, script]
       - !reference [ .get_from_tar_and_replace_www, script ]
-      - git add --all
+      - git add .
       - git config --global user.email "devops@faradaysec.com"
       - git config --global user.name "Devops"
       - git commit -m "Front Updated"
-      - git show-ref
+      #- git show-ref
       - git push --force github $CI_COMMIT_REF_NAME:master
     rules:
       - if: $FORK_TEST
